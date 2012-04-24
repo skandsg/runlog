@@ -14,26 +14,22 @@ describe "StaticPages" do
   describe "Home page" do
 
     it "should have the content 'Run Log'" do
-      visit '/static_pages/home' 
+      visit root_path
       page.should have_content('Run Log')
     end
     
-    it "should have the title 'Home'" do
-      visit '/static_pages/home'
-      page.should have_selector('title', 
-                              :text => " | Home")
-    end
+  
   end
   
   describe "Help page" do
     
     it "should have the content 'Help" do
-      visit '/static_pages/help'
+      visit help_path
       page.should have_content('Help')
     end
     
     it "should have the title 'Help'" do
-       visit '/static_pages/help'
+       visit help_path
        page.should have_selector('title', 
                                :text => " | Help")
      end
@@ -42,12 +38,12 @@ describe "StaticPages" do
   describe "About page" do
     
     it "should have the content 'About Us" do
-      visit '/static_pages/about'
+      visit about_path
       page.should have_content('About Us')
     end
     
     it "should have the title 'About'" do
-       visit '/static_pages/about'
+       visit about_path
        page.should have_selector('title', 
                                :text => " | About")
      end
